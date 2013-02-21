@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!--All links here!-->
+		<link href="reset.css" rel="stylesheet" type="text.css">
+		<link href="style.css" rel="stylesheet" type="text.css">
+		<script src="jquery-1.9.0.js"></script>
+		<script src="recipeaction.js"></script>
+		<script src="foodaction.js"></script>
+		<script src="canvasfn.js"></script>
+	  	<script src="client.js"></script>
+
+		<title>Recipe Savior</title>
+	</head>
+
+	<!--Site layout-->
+	<body>
+		<div class "bigContainer">
+
+		<div class="canvas">
+			<canvas id="myCanvas" width="1000" height="700" style="border:1px solid #000000;">
+			Your browser does not support HTML5</canvas>
+		</div>
+
+
+		<div class="container">
+
+			<div class="header">
+				<h1>Recipe Saver</h1>
+			</div>
+
+			<div class="picbox">
+			 
+			</div>
+
+			<div class="recipebox">
+			
+				<div class="display">
+				<form id="newRecipe">
+					<h3>Enter a new recipe </h3><br>
+					Recipe Name: <input type="text" name="name"><br>
+					Ingredients: <br> <textarea class="strecharea" name="ingre" rows="5"cols ="40" placeholder="enter ingredients here, separate each with a coma"></textarea> <br>
+					Directions: <br> <textarea class="strecharea" name="dir" rows="10"cols ="40" placeholder="enter directions here, separate each step with a new line"></textarea> <br>
+					<button type="submit" name="submitNew" formmethod="post" > Add New Recipe </button>
+				</form>
+				</div><!--End display-->
+
+				<div class="menulist">
+					<ul>
+						<li>New</li>
+						<li>Search</li>
+						<li>Edit</li>
+						<li>Delete</li>
+					</ul>
+				</div>
+			</div><!--End recipebox-->
+
+			<div class= "footer">
+				Copyright 2013 Angela Qiu & Sarah Chen 
+			</div>
+		</div><!--End container-->
+
+		</div><!--End bigcontainer-->
+	</body>
+
+</html>

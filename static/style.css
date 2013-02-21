@@ -1,0 +1,113 @@
+/*
+Style.css for project 4
+*/
+
+body{
+	font-size: 12px;
+	font-family: Verdana, Arial, sans-serif;
+	background-color: #FAE1EB;
+	text-align: center;
+
+}
+
+p{
+
+}
+
+a{
+
+}
+h1{
+	text-align: left;
+	font-size:30px;
+	color:red;
+}
+
+h3{
+	text-align: center;
+	font-size:14px;
+	font-weight: bold;
+}
+
+
+.canvas{
+	position: absolute;
+	top:0px;
+	margin-left:auto;
+	margin-right:auto;
+
+}
+.container{
+	position: absolute;
+	top:0px;
+	background-color: #cccccc;
+	padding: 10px;
+	width: 980px;
+	height: 680px;
+	margin-left:auto;
+	margin-right:auto;
+	border:2px solid;
+	border-radius:10px;
+
+}
+.header{
+	padding: 20px;
+	height:60px;
+	background-color: #000000;
+
+}
+
+.picbox{
+	float: left;
+	width:50%;
+	height: 580px;
+	background-color: #777777;
+}
+
+.recipebox{
+	float: right;
+	min-width: 300px;
+	width:50%;
+	height: 580px;
+	background-color: #999999;
+	text-align: center;
+	display:inline-block;
+}
+
+.footer{
+	text-align: center;
+	font-size: 8px;
+
+}
+#newRecipe{
+	text-align: left;
+	background-color: #DCFBFC;
+	padding: 15px;
+	margin: 20px;
+	margin-top: 40px;
+	margin-right: 80px;
+}
+
+textarea{
+	resize: none;
+	outline: none;
+	overflow: auto;
+	padding-bottom:20px;
+	width:95%;
+}
+
+.display{
+	/*width:90%;*/
+}
+.menulist {
+	width:10%;
+	position:relative;
+	right:0;
+	margin-bottom: 20px;
+  	font-weight: bold;
+  	padding:10px;
+}
+ul{
+	list-style: none;
+	text-align:left;
+}
