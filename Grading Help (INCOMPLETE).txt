@@ -1,0 +1,17 @@
+=====================
+GROUP MEMBERS
+=====================
+Angela Qiu (aqiu)
+Sarah Chen (swchen)
+
+
+=====================
+REQUIRED ELEMENTS
+=====================
+none yet.
+
+Ex.
+Element: -element goes here-
+Line Numbers: -line numbers go here-
+Description: -how element was satisfied and how TA
+	can confirm-
