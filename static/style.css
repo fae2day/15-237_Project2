@@ -83,9 +83,10 @@ h3{
 	text-align: left;
 	background-color: #DCFBFC;
 	padding: 15px;
-	margin: 20px;
+	/*margin: 20px;*/
 	margin-top: 40px;
 	margin-right: 80px;
+	
 }
 
 textarea{
@@ -100,14 +101,29 @@ textarea{
 	/*width:90%;*/
 }
 .menulist {
-	width:10%;
-	position:relative;
-	right:0;
-	margin-bottom: 20px;
+
+	
+	position:absolute;
+	width: 60px;
+	top:150px;
+	right:10px;
   	font-weight: bold;
-  	padding:10px;
+  	padding: 10px;
 }
 ul{
+
 	list-style: none;
 	text-align:left;
+	margin-bottom: 0;
+
+
+}
+li{
+	background-color: white;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+li:hover{
+	background-color: blue;
+	
 }
