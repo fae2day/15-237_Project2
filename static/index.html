@@ -6,8 +6,6 @@
 		<link href="reset.css" rel="stylesheet" type="text.css">
 		<link href="style.css" rel="stylesheet" type="text.css">
 
-		<link href='http://fonts.googleapis.com/css?family=Petit+Formal+Script' rel='stylesheet' type='text/css'>
-
 		<title>Recipe Savior</title>
 	</head>
 
@@ -15,12 +13,16 @@
 	<body>
 		<div class "bigContainer">
 
+		<div class="canvas">
+			<canvas id="myCanvas" width="1000" height="700" style="border:1px solid #000000;">
+			Your browser does not support HTML5</canvas>
+		</div>
+
 
 		<div class="container">
 
 			<div class="header">
-				<br>
-				<h1>Recipe Savior</h1>
+				<h1>Recipe Saver</h1>
 			</div>
 
 			<div class="picbox">
@@ -31,20 +33,34 @@
 			
 				<div class="display">
 
+					<form id="newRecipe" action="javascript:addRecipe()">
+						<h3>Enter a new recipe </h3><br>
+						Recipe Name: <input type="text" id="name"><br>
+						Ingredients: <br> <textarea class="stretcharea" id="ingre" rows = "5" cols = "40" 
+							placeholder = "enter ingredients here, separate each with a coma"></textarea> <br>
+							
+						Directions: <br> <textarea class="stretcharea" id="dir" rows = "10" cols = "40" 
+							placeholder= "enter directions here, separate each step with a new line"></textarea> <br>
+						Image: <input type="text" id="foodpic"><br>
+						
+						<input id="submitButton" name="Submit"  type="submit" 
+							value="Add New Recipe"/>
+
+					<!--</form>
+
 					<div id ="new" class ="notepad">
 						
 						<h3>New Recipe</h3>
 					
 						<form id="newRecipe">
 						<br>
-						Recipe Name: <input type="text" name="name" action="javascript:addRecipe()"><br>
+						Recipe Name: <input type="text" name="name"><br>
 						Ingredients: <br> <textarea class="strecharea" name="ingre" rows="5"cols ="40" placeholder="enter ingredients here, separate each with a coma"></textarea> <br>
 						Directions: <br> <textarea class="strecharea" name="dir" rows="10"cols ="40" placeholder="enter directions here, separate each step with a new line"></textarea> <br>
 						Image: <input type="text" name="foodpic"><br><br>
-						<input id="submitButton" name="Submit"  type="submit" 
-							value="Add New Recipe"/>
+						<button type="submit" name="submitNew" formmethod="post" > Add New Recipe </button>
 
-					</form>
+					</form>-->
 
 					</div>
 
@@ -91,11 +107,6 @@
 				Copyright 2013 Angela Qiu & Sarah Chen 
 			</div>
 		</div><!--End container-->
-
-		<div class="canvas">
-			<canvas id="myCanvas" width="500" height="700" style="border:1px solid #000000;">
-			Your browser does not support HTML5</canvas>
-		</div>
 
 		</div><!--End bigcontainer-->
 		
