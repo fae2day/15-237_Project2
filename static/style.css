@@ -5,7 +5,7 @@ Style.css for project 4
 body{
 	font-size: 12px;
 	font-family: Verdana, Arial, sans-serif;
-	background-color: #FAE1EB;
+	/*background-color: #FAE1EB;*/
 	text-align: center;
 
 }
@@ -40,7 +40,7 @@ h3{
 .container{
 	position: absolute;
 	top:0px;
-	background-color: #cccccc;
+	/*background-color: #cccccc;*/
 	padding: 10px;
 	width: 980px;
 	height: 680px;
@@ -54,6 +54,7 @@ h3{
 	padding: 20px;
 	height:60px;
 	background-color: #000000;
+	text-align: left;
 
 }
 
@@ -61,7 +62,7 @@ h3{
 	float: left;
 	width:50%;
 	height: 580px;
-	background-color: #777777;
+	/*background-color: #777777;*/
 }
 
 .recipebox{
@@ -69,8 +70,7 @@ h3{
 	min-width: 300px;
 	width:50%;
 	height: 580px;
-	background-color: #999999;
-	text-align: center;
+	/*background-color: #999999;*/
 	display:inline-block;
 }
 
@@ -82,10 +82,20 @@ h3{
 #newRecipe{
 	text-align: left;
 	background-color: #DCFBFC;
+	
+	
+}
+#searchRecipe{
+	text-align: left;
+}
+.notepad{
 	padding: 15px;
-	/*margin: 20px;*/
 	margin-top: 40px;
 	margin-right: 80px;
+
+}
+.display{
+
 	
 }
 

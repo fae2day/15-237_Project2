@@ -32,6 +32,7 @@
 			<div class="recipebox">
 			
 				<div class="display">
+
 					<form id="newRecipe" action="javascript:addRecipe()">
 						<h3>Enter a new recipe </h3><br>
 						Recipe Name: <input type="text" id="name"><br>
@@ -46,10 +47,54 @@
 							value="Add New Recipe"/>
 
 					</form>
+
+					<div id ="new" class ="notepad">
+						
+						<h3>New Recipe</h3>
+					
+						<form id="newRecipe">
+						<br>
+						Recipe Name: <input type="text" name="name"><br>
+						Ingredients: <br> <textarea class="strecharea" name="ingre" rows="5"cols ="40" placeholder="enter ingredients here, separate each with a coma"></textarea> <br>
+						Directions: <br> <textarea class="strecharea" name="dir" rows="10"cols ="40" placeholder="enter directions here, separate each step with a new line"></textarea> <br>
+						Image: <input type="text" name="foodpic"><br><br>
+						<button type="submit" name="submitNew" formmethod="post" > Add New Recipe </button>
+
+					</form>
+
+					</div>
+
+					<div id ="search" class ="notepad">
+						<h3>Looking for something? </h3> <br>
+						<form id="searchRecipe">
+
+							<b>Search:</b>  <input type="text" name="search" placeholder="Type in a keyword here"><br><br>
+							<button name="search" formmethod="post" > Search </button>
+
+						</form>
+						<div id ="searchResults">
+						</div>
+
+					</div>
+					<div id ="edit" class ="notepad">
+						<h3>Edit Your Recipe!</h3>
+						<div id="editRecipe">
+							<!--<button type="submit" name="edit" formmethod="post" > Finished editing</button>-->
+						</div>
+
+					</div>
+					<div id ="delete" class ="notepad">
+						<!-- maybe i dont need this idkk -->
+					</div>
+					<div id ="displayRecipe" class ="notepad">
+						<!-- lets the user scroll through the recipes-->
+					</div>
+				
 				</div><!--End display-->
 
 				<div class="menulist">
 					<ul>
+						<li><a>View</a></li>
 						<li><a>New</a></li>
 						<li><a>Search</a></li>
 						<li><a>Edit</a></li>
