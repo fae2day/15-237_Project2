@@ -18,9 +18,10 @@ a{
 
 }
 h1{
-	text-align: left;
-	font-size:30px;
-	color:red;
+	text-align: center;
+	font-size:40px;
+	color:black;
+	font-family: 'Petit Formal Script', cursive;
 }
 
 h3{
@@ -48,13 +49,15 @@ h3{
 	margin-right:auto;
 	border:2px solid;
 	border-radius:10px;
+	background-image: url(http://www.pastelpatterns.com/large/largepattern-2.png);
 
 }
 .header{
 	padding: 20px;
 	height:60px;
-	background-color: #000000;
+	background-color: #ffffff;
 	text-align: left;
+	border-radius:10px;
 
 }
 
