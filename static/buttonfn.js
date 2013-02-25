@@ -1,4 +1,5 @@
-
+//functions for the buttons on the page, basically toggles the various pages
+//dom manipulation is beautiful
 $(document).ready(function(){
 	hideEverything();
 	$('#welcomePage').show();
