@@ -1,0 +1,41 @@
+
+$(document).ready(function(){
+	hideEverything();
+	$('#welcomePage').show();
+	console.log("loaded!");
+
+});
+
+$('#menuview').click(function(){
+	
+	hideEverything();
+	$('#displayRecipe').show();
+});
+
+$('#menunew').click(function(){
+	
+	hideEverything();
+	$('#newRecipe').show();
+});
+
+$('#menusearch').click(function(){
+	
+	hideEverything();
+	$('#searchRecipe').show();
+});
+
+$('#menuedit').click(function(){
+	
+	hideEverything();
+	$('#editRecipe').show();
+});
+
+function hideEverything(){
+	
+	$('#newRecipe').hide();
+	$('#searchRecipe').hide();
+	$('#editRecipe').hide();
+	$('#deleteRecipe').hide();
+	$('#displayRecipe').hide();
+	$('#welcomePage').hide();
+}

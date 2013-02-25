@@ -34,13 +34,22 @@
 
 			<div class="recipebox">
 			
-				<div class="display">
+				<div class="displayPage">
 
-					<div id ="new" class ="notepad">
+
+					<div id ="welcomePage" class ="notepad">
+						<h3>Welcome to Recipe Savior</h3> <br>
+						<p> This is a new way for you to keep track of all the recipies you love and use! 
+							You may add, delete, edit a recipe, or you may view all the recipies on file  <br><br>
+							To begin, enter a new recipe using the left menu! <br>
+						</p>
+
+					</div>
+					<div id ="newRecipe" class ="notepad">
 						
 						<h3>New Recipe</h3>
 					
-						<form id="newRecipe">
+						<form id="newForm">
 						<br>
 						Recipe Name: <input type="text" name="name" action="javascript:addRecipe()"><br>
 						Ingredients: <br> <textarea class="strecharea" name="ingre" rows="5"cols ="40" placeholder="enter ingredients here, separate each with a coma"></textarea> <br>
@@ -53,7 +62,7 @@
 
 					</div>
 
-					<div id ="search" class ="notepad">
+					<div id ="searchRecipe" class ="notepad">
 						<h3>Looking for something? </h3> <br>
 						<form id="searchRecipe">
 
@@ -65,17 +74,19 @@
 						</div>
 
 					</div>
-					<div id ="edit" class ="notepad">
+					<div id ="editRecipe" class ="notepad">
 						<h3>Edit Your Recipe!</h3>
-						<div id="editRecipe">
+						<div id="editForm">
 							<!--<button type="submit" name="edit" formmethod="post" > Finished editing</button>-->
 						</div>
 
 					</div>
-					<div id ="delete" class ="notepad">
-						<!-- maybe i dont need this idkk -->
-					</div>
+					<!--
+					<div id ="deleteRecipe" class ="notepad">
+						 maybe i dont need this idkk 
+					</div>-->
 					<div id ="displayRecipe" class ="notepad">
+
 						<!-- lets the user scroll through the recipe, needs left and right arrow-->
 					</div>
 				
@@ -83,11 +94,11 @@
 
 				<div class="menulist">
 					<ul>
-						<li><a>View</a></li>
-						<li><a>New</a></li>
-						<li><a>Search</a></li>
-						<li><a>Edit</a></li>
-						<li><a>Delete</a></li>
+						<li id="menuview"><a href="#">View</a></li>
+						<li id="menunew"><a href="#">New</a></li>
+						<li id="menusearch"><a href="#">Search</a></li>
+						<li id="menuedit"><a href="#">Edit</a></li>
+						<li id="menudelete"><a href="#">Delete</a></li>
 					</ul>
 				</div>
 			</div><!--End recipebox-->
@@ -106,6 +117,7 @@
 		
 		<!-- Script Tags -->
 		<script src="jquery-1.9.0.js"></script>
+		<script src="buttonfn.js"></script>
 		<!-- <script src="recipeaction.js"></script>
 		<script src="foodaction.js"></script> -->
 		<script src="canvasfn.js"></script>
