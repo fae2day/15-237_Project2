@@ -6,12 +6,61 @@ Sarah Chen (swchen)
 
 
 =====================
+DOCUMENTATION
+=====================
+Grading Help.txt: This file. A guide to help graders identify
+addressed elements in this project.
+
+README.txt: The readme file. Includes a description of the
+project and instructions on how to use it.
+
+
+=====================
 REQUIRED ELEMENTS
 =====================
-none yet.
+Element: Javascript
+File: static/canvasfn.js, static/client.js, static/server.js
+Description: -how element was satisfied and how TA 
+can confirm-
 
-Ex.
-Element: -element goes here-
-Line Numbers: -line numbers go here-
+
+Element: Canvas
+File: static/canvasfn.js
+Description: -how element was satisfied and how TA
+	can confirm-
+
+
+Element: HTML
+File: index.html
+Description: -how element was satisfied and how TA
+	can confirm-
+
+
+Element: CSS
+File: reset.css, style.css
+Description: -how element was satisfied and how TA
+	can confirm-
+
+
+Element: DOM manipulation
+File: static/client.js
+Description: -how element was satisfied and how TA
+	can confirm-
+
+
+Element: jQuery
+File: static/client.js
+Description: -how element was satisfied and how TA
+	can confirm-
+
+
+Element: AJAX client
+File: static/client.js
+Description: -how element was satisfied and how TA
+	can confirm-
+
+
+Element: AJAX server
+File: server.js
 Description: -how element was satisfied and how TA
 	can confirm-

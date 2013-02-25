@@ -40,9 +40,9 @@ function findRecipe(){
 }
 
 //get entire list of recipes
-app.get("/listings", function(request, response){
+app.get("/recipeList", function(request, response){
   response.send({
-    listings: recipeList,
+    recipeList: recipeList,
     success: true
   });
 });
@@ -50,36 +50,39 @@ app.get("/listings", function(request, response){
 //get a page of recipes (?)
 
 //get one recipe
-app.get("/listings/:id", function(request, response){
+app.get("/recipeList/:id", function(request, response){
   var id = request.params.id;
   var item = recipeList[id];
   response.send({
-    listings: item,
+    recipeList: item,
     success: (item !== undefined)
   });
 });
 
 //create new recipe
-app.post("/listings", function(request, response) {
-	var item = {"title": request.body.title;
-							"date": new Date();
-							"author": request.body.author;
-							"description": request.body.description;
-							"ingredients": request.body.ingredients;
-							"instructions": request.body.instructions};
+app.post("/recipeList", function(request, response) {
+	console.log("posting recipe...");
+
+	var item = {"title": request.body.title,
+							"ingredients": request.body.ingredients,
+							"directions": request.body.directions,
+							"imageURL": request.body.imageURL};
+							
+	console.log(item);
 							
 	var successful = 
       (item.title !== undefined) &&
-      (item.author !== undefined) &&
-			(item.description !== undefined) &&
 			(item.ingredients !== undefined) &&
-			(item.instructions !== undefined);
+			(item.directions !== undefined) &&
+			(item.imageURL !== undefined);
 	
 	if (successful) {
     recipeList.push(item);
-    writeFile("data.txt", JSON.stringify(listings));
+    writeFile("recipes.txt", JSON.stringify(recipeList));
+		console.log("recipe posted!");
   } else {
     item = undefined;
+		console.log("recipe posting unsuccessful.");
   }
 							
 	response.send({ 
@@ -89,52 +92,54 @@ app.post("/listings", function(request, response) {
 });
 
 //update a recipe
-app.put("/listings/:id", function(request, response){
+app.put("/recipeList/:id", function(request, response){
   // change listing at index, to the new listing
   var id = request.params.id;
-  var oldItem = listings[id];
-  var item = {"title": request.body.title;
-							"date": new Date();
-							"author": request.body.author;
-							"description": request.body.description;
-							"ingredients": request.body.ingredients;
-							"instructions": request.body.instructions};
+  var oldItem = recipeList[id];
+  var item = {"title": request.body.title,
+							"ingredients": request.body.ingredients,
+							"directions": request.body.directions,
+							"imageURL": request.body.imageURL};
 							
-  item.desc = (item.title !== undefined) ? item.title : oldItem.title;
-  item.author = (item.author !== undefined) ? item.author : oldItem.author;
-  item.description = (item.description !== undefined) ? item.description : oldItem.description;
-  item.ingredients = (item.ingredients !== undefined) ? item.ingredients : oldItem.ingredients;
-	item.instructions = (item.instructions !== undefined) ? item.instructions : oldItem.instructions;
+  item.title = (item.title !== undefined) ? item.title : oldItem.title;
+  item.ingredients = (item.ingredients !== undefined) ? 
+		item.ingredients : oldItem.ingredients;
+	item.directions = (item.directions !== undefined) ? 
+		item.directions : oldItem.directions;
 
   // commit the update
-  listings[id] = item;
+  recipeList[id] = item;
 
   response.send({
     item: item,
     success: true
   });
-}););
+	
+});
 
 //delete a recipe
-app.delete("/listings/:id", function(request, response){
+app.delete("/recipeList/:id", function(request, response){
   var id = request.params.id;
-  var old = listings[id];
-  listings.splice(id, 1);
-  writeFile("data.txt", JSON.stringify(listings));
+  var old = recipeList[id];
+  recipeList.splice(id, 1);
+  writeFile("recipes.txt", JSON.stringify(recipeList));
   response.send({
-    listings: old,
+    recipeList: old,
     success: (old !== undefined)
   });
 });
 
+// This is for serving files in the static directory
+app.get("/static/:staticFilename", function (request, response) {
+    response.sendfile("static/" + request.params.staticFilename);
+});
 
 function initServer() {
   var defaultList = "[]";
   readFile("recipes.txt", defaultList, function(err, data) {
-    listings = JSON.parse(data);
+    recipeList = JSON.parse(data);
   });
 }
 
 initServer();
-
 app.listen(8889);
